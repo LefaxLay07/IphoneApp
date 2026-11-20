@@ -1,6 +1,6 @@
 // Service worker de « Mon Empire » : fonctionnement hors ligne.
 // Changez VERSION à chaque mise à jour des fichiers.
-const VERSION = 'empire-v1';
+const VERSION = 'empire-v2';
 const ASSETS = ['./', './index.html', './style.css', './game.js', './manifest.webmanifest',
   './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png'];
 

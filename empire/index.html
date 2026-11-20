@@ -19,24 +19,41 @@
 </head>
 <body>
   <header class="hud">
-    <div class="hud-text">
-      <p class="label">Trésorerie</p>
-      <p id="money" class="money">0 €</p>
-      <p id="rate" class="rate">0 € / s</p>
+    <div class="hud-main">
+      <div class="hud-text">
+        <p class="label">Trésorerie</p>
+        <p id="money" class="money">0 €</p>
+        <p id="rate" class="rate">0 € / s</p>
+      </div>
+      <button id="work" class="work" aria-label="Travailler pour gagner de l'argent">
+        <span class="work-emoji" aria-hidden="true">💼</span>
+        <span id="tapval" class="tapval">+1 €</span>
+      </button>
     </div>
-    <button id="work" class="work" aria-label="Travailler pour gagner de l'argent">
-      <span class="work-emoji" aria-hidden="true">💼</span>
-      <span id="tapval" class="tapval">+1 €</span>
-    </button>
+    <div class="hud-bar">
+      <button id="lvl" class="lvl" aria-label="Votre niveau">
+        <span id="lvl-num" class="lvl-num">1</span>
+        <span class="lvl-info">
+          <span id="lvl-title" class="lvl-title"></span>
+          <span class="xp"><i id="xp-bar"></i></span>
+        </span>
+      </button>
+      <span id="gems" class="gems">💎 0</span>
+    </div>
+    <div id="boosts" class="boosts"></div>
   </header>
 
   <main id="view"></main>
 
   <nav class="tabbar" aria-label="Navigation">
     <button class="tab" data-tab="biz" aria-current="page"><span class="ti" aria-hidden="true">🏢</span><span>Entreprises</span></button>
-    <button class="tab" data-tab="up"><span class="ti" aria-hidden="true">⚡</span><span>Améliorations</span><b class="badge" id="badge-up" hidden></b></button>
+    <button class="tab" data-tab="up"><span class="ti" aria-hidden="true">⚡</span><span>Améliorer</span><b class="badge" id="badge-up" hidden></b></button>
+    <button class="tab" data-tab="missions"><span class="ti" aria-hidden="true">🎯</span><span>Missions</span><b class="badge" id="badge-missions" hidden></b></button>
+    <button class="tab" data-tab="shop"><span class="ti" aria-hidden="true">💎</span><span>Boutique</span><b class="badge" id="badge-shop" hidden></b></button>
     <button class="tab" data-tab="empire"><span class="ti" aria-hidden="true">👑</span><span>Empire</span></button>
   </nav>
+
+  <button id="event" class="event" hidden aria-label="Attraper la surprise"><span id="event-emoji">🎁</span></button>
 
   <div id="modal" class="modal" hidden>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">

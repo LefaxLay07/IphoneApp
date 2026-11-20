@@ -14,12 +14,19 @@ Ce dépôt contient deux applications web installables sur iPhone (PWA) :
 Bâtissez un empire d'entreprises qui rapportent de l'argent **tout seul**, même quand l'app est fermée. L'argent est 100 % fictif.
 
 - 💼 Touchez la pièce pour travailler et gagner vos premiers euros
-- 🏢 12 entreprises à acheter, du stand de limonade à la colonie sur Mars
-- 📈 Paliers (10, 25, 50, 100… unités) qui doublent les revenus
-- ⚡ Améliorations : directeurs, franchises, campagnes de pub, IA…
+- 🏢 **20 entreprises**, du stand de limonade à l'empire galactique, débloquées au fil des niveaux
+- 📈 **17 paliers** par entreprise (10, 25, 50… 2000 unités) qui doublent les revenus
+- ⭐ **Niveaux du joueur** sans limite, avec 19 titres (de « Vendeur de rue » à « Au-delà de l'infini »), +2 % de revenus par niveau
+- ⚡ **96 améliorations** : directeurs, franchises, multinationales, légendes, campagnes de pub, IA, fusion nucléaire…
+- 🎯 **Missions infinies** : 3 objectifs à la fois, renouvelés dès qu'ils sont réussis
+- 🏆 **263 trophées** à collectionner, +1 % de revenus chacun
+- 🎈 **Surprises** qui traversent l'écran : client VIP, buzz viral, diamants, colis mystère…
+- 🎁 **Cadeau du jour** avec série sur 7 jours
+- 🎡 **Roue de la fortune** : un tour gratuit par jour, jackpot possible
+- 💎 **Boutique à diamants** : boosts, bonds dans le temps, formation express, investissement éternel
 - 💰 Gains hors ligne jusqu'à 24 h : « Bon retour, patron ! »
 - 👔 Revendez votre empire pour gagner des investisseurs (+2 % de revenus chacun, pour toujours)
-- ⏩ Zone de test : avancer le temps de 1 h ou 24 h
+- ⏩ Zone de test : avancer le temps, recevoir des diamants, gagner un niveau, faire apparaître une surprise
 
 ---
 

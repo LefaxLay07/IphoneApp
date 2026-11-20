@@ -232,3 +232,119 @@ button.row:active { background: var(--faint); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* =========================================================
+   Niveaux, diamants, boosts, missions, trophées, roue, boutique
+   ========================================================= */
+.hud { flex-direction: column; align-items: stretch; gap: 8px; }
+.hud-main { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.money { font-size: 32px; }
+.work { width: 76px; height: 76px; }
+.work-emoji { font-size: 28px; }
+
+.hud-bar { display: flex; align-items: center; gap: 10px; }
+.lvl { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; text-align: left; }
+.lvl-num {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, #7B4DFF, #FC5C9C); color: #fff;
+  display: grid; place-items: center; font-weight: 800; font-size: 14px;
+}
+.lvl-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.lvl-title { font-size: 12px; font-weight: 700; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.xp { display: block; height: 7px; border-radius: 4px; background: var(--faint); overflow: hidden; margin-top: 4px; }
+.xp i { display: block; height: 100%; width: 0; border-radius: 4px; background: linear-gradient(90deg, #7B4DFF, #FC5C9C); transition: width .3s; }
+.gems {
+  flex: none; background: var(--card); box-shadow: var(--shadow);
+  padding: 6px 12px; border-radius: 999px; font-weight: 800; font-size: 14px; font-variant-numeric: tabular-nums;
+}
+.boosts { display: flex; flex-wrap: wrap; gap: 6px; }
+.boosts:empty { display: none; }
+.chip {
+  background: linear-gradient(90deg, #7B4DFF, #FC5C9C); color: #fff;
+  font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabbar { gap: 0; padding-left: 4px; padding-right: 4px; }
+.tab { flex: 1; min-width: 0; max-width: 96px; font-size: 10px; }
+.tab .ti { font-size: 22px; }
+.badge { left: 58%; }
+
+.lockbtn {
+  min-width: 92px; padding: 8px 10px; border-radius: 12px;
+  background: var(--faint); color: var(--muted);
+  display: flex; flex-direction: column; align-items: center; font-size: 18px;
+}
+.lockbtn small { font-size: 12px; font-weight: 700; }
+
+.biz-name.wrap { white-space: normal; }
+.rewards { display: block; margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--gold); }
+.muted { color: var(--muted); }
+.mission .buy { min-width: 84px; }
+
+/* Cadeau du jour */
+.daily { background: linear-gradient(135deg, #7B4DFF, #FC5C9C); color: #fff; border-radius: 20px; padding: 16px; margin-top: 8px; }
+.daily-head { display: flex; gap: 12px; align-items: center; }
+.daily-head .e { font-size: 40px; }
+.daily-head b { display: block; font-size: 18px; }
+.daily-head small { opacity: .85; }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin: 14px 0; }
+.days span { background: rgba(255, 255, 255, .18); border-radius: 10px; padding: 6px 0; font-size: 11px; font-weight: 800; text-align: center; line-height: 1.35; }
+.days span.done { background: rgba(255, 255, 255, .92); color: #5B2BC4; }
+.days span.now { box-shadow: inset 0 0 0 2px #fff; animation: pulse 1.2s ease-in-out infinite alternate; }
+@keyframes pulse { to { transform: scale(1.08); } }
+.daily .primary { width: 100%; }
+.daily .primary:disabled { background: rgba(255, 255, 255, .22); color: rgba(255, 255, 255, .9); }
+
+/* Trophées */
+.ach-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 6px;
+  background: var(--card); border-radius: 16px; padding: 10px; box-shadow: var(--shadow);
+}
+.ach-grid button { aspect-ratio: 1; border-radius: 10px; background: var(--faint); font-size: 20px; filter: grayscale(1); opacity: .3; }
+.ach-grid button.on { filter: none; opacity: 1; background: color-mix(in srgb, var(--gold) 22%, transparent); }
+
+/* Roue de la fortune */
+.wheel-card { background: var(--card); border-radius: 20px; padding: 18px 16px; text-align: center; box-shadow: var(--shadow); margin-top: 8px; }
+.wheel-card h2 { margin: 0 0 2px; font-size: 20px; }
+.wheel-card p { margin: 0; font-size: 14px; }
+.wheel-wrap { position: relative; width: 250px; height: 250px; margin: 22px auto 18px; }
+.wheel {
+  position: absolute; inset: 0; border-radius: 50%;
+  box-shadow: 0 0 0 6px #F2B705, 0 0 0 10px #A06E00, 0 12px 30px rgba(0, 0, 0, .3);
+}
+.wheel span {
+  position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px;
+  display: grid; place-items: center; font-size: 26px;
+  transform: rotate(var(--a)) translateY(-86px);
+}
+.pointer {
+  position: absolute; left: 50%; top: -18px; z-index: 2; transform: translateX(-50%);
+  width: 0; height: 0; border-left: 16px solid transparent; border-right: 16px solid transparent;
+  border-top: 28px solid #E5484D; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35));
+}
+.hub {
+  position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px;
+  border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFE08A, #F2B705 60%, #C98A00);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .3); display: grid; place-items: center; font-size: 26px;
+}
+.wheel-card .primary { width: 100%; }
+.wheel-card .primary:disabled { background: var(--faint); color: var(--muted); }
+.buy.gem { background: linear-gradient(135deg, #7B4DFF, #FC5C9C); color: #fff; }
+.buy.gem.poor { background: var(--faint); color: var(--muted); }
+.eternal { box-shadow: 0 0 0 2px #F2B705, var(--shadow); }
+
+/* Surprise qui traverse l'écran */
+.event {
+  position: fixed; left: 0; z-index: 25; width: 66px; height: 66px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 36px;
+  background: radial-gradient(circle at 35% 30%, #fff, #FFE9A3);
+  box-shadow: 0 0 0 4px rgba(242, 183, 5, .55), 0 0 30px rgba(242, 183, 5, .6), 0 8px 24px rgba(0, 0, 0, .25);
+}
+.event[hidden] { display: none; }
+.event.go { animation: drift 11s linear forwards; }
+.event span { display: block; animation: bob .8s ease-in-out infinite alternate; }
+@keyframes drift { from { transform: translateX(-80px); } to { transform: translateX(calc(100vw + 80px)); } }
+@keyframes bob { from { transform: translateY(-6px) rotate(-10deg); } to { transform: translateY(6px) rotate(10deg); } }
+
+.modal-card p strong { color: var(--text); }
