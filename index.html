@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Habitudes</title>
+  <meta name="description" content="Suivez vos habitudes quotidiennes, même hors ligne.">
+  <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <!-- Installation sur iPhone (Safari → Partager → Sur l'écran d'accueil) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Habitudes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-live="polite"></main>
+
+  <nav class="tabbar" aria-label="Navigation">
+    <button class="tab" data-tab="today" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12.5l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <span>Aujourd'hui</span>
+    </button>
+    <button class="tab" data-tab="stats">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Statistiques</span>
+    </button>
+  </nav>
+
+  <div id="sheet" class="sheet-wrap" aria-hidden="true">
+    <div class="backdrop" data-close></div>
+    <form class="sheet" id="sheet-form" role="dialog" aria-modal="true" aria-labelledby="sheet-title" novalidate>
+      <div class="grabber" aria-hidden="true"></div>
+      <div class="sheet-head">
+        <button type="button" class="link" data-close>Annuler</button>
+        <h2 id="sheet-title">Nouvelle habitude</h2>
+        <button type="submit" class="link strong">OK</button>
+      </div>
+      <div class="preview" id="preview"><span id="preview-emoji">💧</span></div>
+      <label class="field">
+        <span class="visually-hidden">Nom</span>
+        <input id="f-name" maxlength="40" placeholder="Ex. : Boire 2 L d'eau" autocomplete="off" enterkeyhint="done">
+      </label>
+      <p class="section-label">Icône</p>
+      <div class="emoji-grid" id="f-emojis"></div>
+      <p class="section-label">Couleur</p>
+      <div class="color-row" id="f-colors"></div>
+      <button type="button" class="danger" id="f-delete">Supprimer l'habitude</button>
+    </form>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+
+  <script src="app.js"></script>
+</body>
+</html>
