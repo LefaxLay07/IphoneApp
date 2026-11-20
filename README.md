@@ -1,3 +1,28 @@
+# Mes apps iPhone 📱
+
+Ce dépôt contient deux applications web installables sur iPhone (PWA) :
+
+| App | Adresse (une fois GitHub Pages activé) | Description |
+|---|---|---|
+| **Habitudes** 🌱 | `https://<votre-nom>.github.io/IphoneApp/` | Suivi d'habitudes quotidiennes |
+| **Mon Empire** 👑 | `https://<votre-nom>.github.io/IphoneApp/empire/` | Jeu de gestion « idle » : argent fictif |
+
+---
+
+## Mon Empire 👑
+
+Bâtissez un empire d'entreprises qui rapportent de l'argent **tout seul**, même quand l'app est fermée. L'argent est 100 % fictif.
+
+- 💼 Touchez la pièce pour travailler et gagner vos premiers euros
+- 🏢 12 entreprises à acheter, du stand de limonade à la colonie sur Mars
+- 📈 Paliers (10, 25, 50, 100… unités) qui doublent les revenus
+- ⚡ Améliorations : directeurs, franchises, campagnes de pub, IA…
+- 💰 Gains hors ligne jusqu'à 24 h : « Bon retour, patron ! »
+- 👔 Revendez votre empire pour gagner des investisseurs (+2 % de revenus chacun, pour toujours)
+- ⏩ Zone de test : avancer le temps de 1 h ou 24 h
+
+---
+
 # Habitudes 🌱
 
 Une application iPhone pour suivre ses habitudes quotidiennes : boire de l'eau, lire, méditer, faire du sport…
@@ -24,7 +49,7 @@ C'est une *application web installable* (PWA) : pas besoin de Mac, d'Xcode ni de
 
 ## Installer sur l'iPhone
 
-1. Ouvrez l'adresse dans **Safari**.
+1. Ouvrez l'adresse de l'app (Habitudes ou Mon Empire) dans **Safari**.
 2. Touchez le bouton **Partager** (carré avec une flèche vers le haut).
 3. Choisissez **« Sur l'écran d'accueil »**, puis **Ajouter**.
 
@@ -47,3 +72,4 @@ python3 -m http.server 8000
 | `sw.js` | Cache hors ligne (changez `VERSION` à chaque mise à jour) |
 | `manifest.webmanifest` | Nom, icônes et mode plein écran |
 | `icons/` | Icônes de l'application |
+| `empire/` | Le jeu « Mon Empire » (mêmes types de fichiers) |

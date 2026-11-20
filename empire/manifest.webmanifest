@@ -1,0 +1,16 @@
+{
+  "name": "Mon Empire",
+  "short_name": "Empire",
+  "description": "Bâtissez un empire d'entreprises qui rapportent de l'argent, même quand l'app est fermée.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B1410",
+  "theme_color": "#0E1A14",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

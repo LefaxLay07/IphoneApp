@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mon Empire</title>
+  <meta name="description" content="Bâtissez un empire d'entreprises qui rapportent de l'argent, même quand l'app est fermée.">
+  <meta name="theme-color" content="#0E1A14">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mon Empire">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hud">
+    <div class="hud-text">
+      <p class="label">Trésorerie</p>
+      <p id="money" class="money">0 €</p>
+      <p id="rate" class="rate">0 € / s</p>
+    </div>
+    <button id="work" class="work" aria-label="Travailler pour gagner de l'argent">
+      <span class="work-emoji" aria-hidden="true">💼</span>
+      <span id="tapval" class="tapval">+1 €</span>
+    </button>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="tabbar" aria-label="Navigation">
+    <button class="tab" data-tab="biz" aria-current="page"><span class="ti" aria-hidden="true">🏢</span><span>Entreprises</span></button>
+    <button class="tab" data-tab="up"><span class="ti" aria-hidden="true">⚡</span><span>Améliorations</span><b class="badge" id="badge-up" hidden></b></button>
+    <button class="tab" data-tab="empire"><span class="ti" aria-hidden="true">👑</span><span>Empire</span></button>
+  </nav>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-emoji" id="modal-emoji">💰</div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+      <button class="primary" id="modal-ok">Encaisser</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <div id="fx" aria-hidden="true"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
